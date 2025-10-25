@@ -36,5 +36,9 @@ scons compiledb=yes compile_commands.json
 
 ## Usage - Actions
 
-This repository comes with a GitHub action that builds the GDExtension for cross-platform use. It triggers automatically for each pushed change. You can find and edit it in [builds.yml](.github/workflows/builds.yml).
-After a workflow run is complete, you can find the file `godot-cpp-template.zip` on the `Actions` tab on GitHub.
+This repository comes with continuous integration (CI) through a GitHub action that tests building the GDExtension.
+It triggers automatically for each pushed change. You can find and edit it in [builds.yml](.github/workflows/ci.yml).
+
+There is also a workflow ([make_build.yml](.github/workflows/make_build.yml)) that builds the GDExtension for all supported platforms that you can use to create releases.
+You can trigger this workflow manually from the `Actions` tab on GitHub.
+After it is complete, you can find the file `godot-cpp-template.zip` in the `Artifacts` section of the workflow run.
